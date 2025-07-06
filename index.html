@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven | Your Literary Sanctuary</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/css2.css">
+    <!-- <link rel="stylesheet" href="styles/all.css"> -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="images/logo_light.png" alt="Book Haven Logo Light" class="logo-light" style="width: 40px; height: 40px;">
+                    <img src="images/Logo_dark.png" alt="Book Haven Logo Dark" class="logo-dark" style="width: 40px; height: 40px;">
+                </div>
+                <div class="logo-text">Book <span>Haven</span></div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="gallery">Gallery</a></li>
+                    <li><a href="#" class="nav-link" data-page="events">Events</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search books...">
+                </div>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                    <div class="cart-dropdown" id="cart-dropdown">
+                        <div class="cart-header">
+                            <h3>Your Cart</h3>
+                            <button id="clear-cart" class="btn" style="padding: 5px 10px; font-size: 0.8rem;">Clear</button>
+                        </div>
+                        <div class="cart-items" id="cart-items">
+                            <!-- Cart items will be added here -->
+                        </div>
+                        <div class="cart-footer">
+                            <div class="cart-total">
+                                <span>Total:</span>
+                                <span id="cart-total">$0.00</span>
+                            </div>
+                            <div class="cart-actions">
+                                <button class="btn" id="checkout">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pages Container -->
+    <main>
+        <!-- Home Page -->
+        <div id="home" class="page-container active-page">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container hero-content">
+                    <h1>Your Literary Sanctuary</h1>
+                    <p>Discover your next favorite book in our curated collection of literature, journals, and more. Join our community of avid readers and knowledge seekers.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn nav-link" data-page="gallery">Shop Now</a>
+                        <a href="#" class="btn nav-link" data-page="events">View Events</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Section -->
+            <section class="section why-section">
+                <div class="container">
+                    <h2 class="section-title">Why Book Haven?</h2>
+                    <div class="features">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h3>Curated Collection</h3>
+                            <p>Hand-picked books across genres to satisfy every reader's taste and curiosity.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Literary Community</h3>
+                            <p>Join book clubs, author events, and discussions with fellow book lovers.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h3>Quality Experience</h3>
+                            <p>Exceptional service in a welcoming environment designed for book enthusiasts.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Books Section -->
+            <section class="section books-section">
+                <div class="container">
+                    <h2 class="section-title">Featured Books</h2>
+                    <div class="books-grid" id="featured-books">
+                        <!-- Featured books will be dynamically added here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Events Section -->
+            <section class="section events-section">
+                <div class="container">
+                    <h2 class="section-title">Upcoming Events</h2>
+                    <div class="events-container">
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="event-day">15</div>
+                                <div class="event-month">June</div>
+                            </div>
+                            <div class="event-info">
+                                <h3>Author Meet & Greet</h3>
+                                <div class="event-time">6:00 PM - 8:00 PM</div>
+                                <p>Join us for an evening with bestselling author Elena Richardson as she discusses her latest novel and signs copies.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="event-day">22</div>
+                                <div class="event-month">June</div>
+                            </div>
+                            <div class="event-info">
+                                <h3>Poetry Reading Night</h3>
+                                <div class="event-time">7:00 PM - 9:00 PM</div>
+                                <p>An open mic night celebrating local poets and spoken word artists. Share your work or enjoy the performances.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="#" class="btn nav-link" data-page="events">View All Events</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+         <!-- Gallery Page -->
+        <div id="gallery" class="page-container">
+            <section class="section books-section">
+                <div class="container">
+                    <h2 class="section-title">Our Collection</h2>
+                    <div class="books-grid" id="books-grid">
+                        <!-- Books will be dynamically added here -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Events Page -->
+        <div id="events" class="page-container">
+            <section class="section events-section">
+                <div class="container">
+                    <h2 class="section-title">Upcoming Events</h2>
+                    <div class="events-container">
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="event-day">15</div>
+                                <div class="event-month">June</div>
+                            </div>
+                            <div class="event-info">
+                                <h3>Author Meet & Greet</h3>
+                                <div class="event-time">6:00 PM - 8:00 PM</div>
+                                <p>Join us for an evening with bestselling author Elena Richardson as she discusses her latest novel and signs copies.</p>
+                                <p><strong>Location:</strong> Book Haven Main Hall</p>
+                            </div>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="event-day">22</div>
+                                <div class="event-month">June</div>
+                            </div>
+                            <div class="event-info">
+                                <h3>Poetry Reading Night</h3>
+                                <div class="event-time">7:00 PM - 9:00 PM</div>
+                                <p>An open mic night celebrating local poets and spoken word artists. Share your work or enjoy the performances.</p>
+                                <p><strong>Location:</strong> Book Haven Poetry Corner</p>
+                            </div>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="event-day">30</div>
+                                <div class="event-month">June</div>
+                            </div>
+                            <div class="event-info">
+                                <h3>Children's Story Hour</h3>
+                                <div class="event-time">10:00 AM - 11:00 AM</div>
+                                <p>Bring your little ones for magical story time with our resident storyteller and fun activities.</p>
+                                <p><strong>Location:</strong> Book Haven Children's Section</p>
+                            </div>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="event-day">05</div>
+                                <div class="event-month">July</div>
+                            </div>
+                            <div class="event-info">
+                                <h3>Book Club Meeting</h3>
+                                <div class="event-time">4:00 PM - 6:00 PM</div>
+                                <p>Join our monthly book club discussion. This month's book: "The Midnight Library" by Matt Haig.</p>
+                                <p><strong>Location:</strong> Book Haven Café</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page-container">
+            <section class="section about-section">
+                <div class="container">
+                    <h2 class="section-title">About Book Haven</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>Book Haven Bookstore is a local treasure for book enthusiasts, offering a diverse selection of books, magazines, journals, and office supplies. With a deep-rooted commitment to fostering literary exploration and a love for reading, we've created an online presence that mirrors our dedication to the world of words.</p>
+                            <p>Founded in 2010, Book Haven has grown from a small neighborhood bookstore to a beloved community hub. Our mission is to amplify visibility, cultivate a vibrant literary community, and simplify the process of book inquiries and purchases.</p>
+                            <p>We serve a broad audience of book lovers and knowledge seekers - from avid readers and students to professionals seeking high-quality reading materials and office essentials.</p>
+                        </div>
+                        
+                        <div class="hours-container">
+                            <h3>Hours of Operation</h3>
+                            <ul class="hours-list">
+                                <li><span>Monday - Friday</span> <span>9:00 AM - 8:00 PM</span></li>
+                                <li><span>Saturday</span> <span>10:00 AM - 6:00 PM</span></li>
+                                <li><span>Sunday</span> <span>11:00 AM - 5:00 PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page-container">
+            <section class="section contact-section">
+                <div class="container">
+                    <h2 class="section-title">Contact Us</h2>
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="order">Order Information</option>
+                                    <option value="event">Event Information</option>
+                                    <option value="feedback">Feedback/Suggestion</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" required></textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn">Submit</button>
+                                <button type="reset" class="btn" style="background: var(--bg3); color: var(--text);">Clear Form</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Book Haven</h3>
+                    <p>Your literary sanctuary since 2010. We're dedicated to fostering a love for reading and building a vibrant community of book lovers.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="#" class="nav-link" data-page="home">Home</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" class="nav-link" data-page="gallery">Gallery</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" class="nav-link" data-page="events">Events</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" class="nav-link" data-page="about">About Us</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;">
+                            <i class="fas fa-map-marker-alt"></i> 123 Literary Lane, Bookville
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            <i class="fas fa-phone"></i> (555) 123-4567
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            <i class="fas fa-envelope"></i> info@bookhaven.com
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates on new arrivals, special offers and other events.</p>
+                    <div class="newsletter-form">
+                        <input type="email" id="newsletter-email" placeholder="Your email address">
+                        <button type="button" id="subscribe-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Book Haven Bookstore. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="thankyou-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <i class="fas fa-check-circle" style="font-size: 4rem; color: var(--accent); margin-bottom: 20px;"></i>
+            <h2 id="modal-title" style="font: var(--title); margin-bottom: 15px;">Thank You!</h2>
+            <p id="modal-message" style="font: var(--body-large);">Your message has been received.</p>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal" id="order-confirmation">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <i class="fas fa-check-circle" style="font-size: 4rem; color: var(--accent); margin-bottom: 20px;"></i>
+            <h2 style="font: var(--title); margin-bottom: 15px;">Thank You for Your Order!</h2>
+            <p style="font: var(--body-large);">Your order has been placed successfully.</p>
+        </div>
+    </div>
+
+    <script src="data/books.js"></script>
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>

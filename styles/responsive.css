@@ -1,0 +1,66 @@
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .event-card {
+        flex-direction: column;
+    }
+    
+    .event-date {
+        align-self: center;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    .book-img img {
+    /* width: 100%;
+    height: 100%; */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+}
+
+@media (max-width: 600px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-card {
+        width: 100%;
+    }
+    
+    .nav-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .cart-dropdown {
+        width: 300px;
+        right: -50px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    /* Adjust book images for small screens */
+    .book-img {
+        height: 200px;
+    }
+    .book-img img {
+    /* width: 100%;
+    height: 100%; */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+}
