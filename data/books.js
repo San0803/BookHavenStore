@@ -5,7 +5,7 @@ const books = [
         title: "Brie Mine 4Ever", 
         author: "A book for cheese lovers Haig", 
         price: 24.99, 
-        image: "images/book1.png",
+        image: "images/Book1.png",
         alt: "Brie Mine 4Ever, a book for cheese lovers"
     },
     { 
@@ -13,7 +13,7 @@ const books = [
         title: "Glory Riders", 
         author: "A book about bikers", 
         price: 26.50, 
-        image: "images/book2.png", 
+        image: "images/Book2.png", 
         alt: "Glory Riders, a book about bikers"
     },
     { 
@@ -21,7 +21,7 @@ const books = [
         title: "Sorcerer’s Shadowed Chronicles", 
         author: "A fantasy book", 
         price: 28.75, 
-        image: "images/book3.png", 
+        image: "images/Book3.png", 
         alt: "Sorcerer’s Shadowed Chronicles, a fantasy book"
     },
     { 
@@ -29,7 +29,7 @@ const books = [
         title: " Ball", 
         author: "A magazine about pickleball", 
         price: 29.99, 
-        image: "images/magazine1.png",
+        image: "images/Magazine1.png",
         alt: "Ball, a magazine about pickleball" 
     },
     { 
@@ -37,7 +37,7 @@ const books = [
         title: "Travel", 
         author: "A magazine for travelers", 
         price: 22.95, 
-        image: "images/magazine2.png",
+        image: "images/Magazine2.png",
         alt: "Travel, a magazine for travelers" 
     },
     { 
@@ -45,7 +45,7 @@ const books = [
         title: "Eat.", 
         author: "A magazine for foodies", 
         price: 25.25, 
-        image: "images/magazine3.png",
+        image: "images/Magazine3.png",
         alt: "Eat., a magazine for foodies" 
     },
     { 
@@ -53,7 +53,7 @@ const books = [
         title: "A canvas tote bag", 
         author: "With black letering that says ALL I DO IS READ READ READ", 
         price: 27.99, 
-        image: "images/ToteBag.png",
+        image: "images/Totebag.png",
         alt: "A canvas tote bag with black lettering that says ALL I DO IS READ READ READ" 
     },
     { 
